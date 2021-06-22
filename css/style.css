@@ -1,12 +1,133 @@
 
-section{
-    height: 100%;
-    width: auto;
-
+section:nth-child(odd){
+  background-color: #eee;
+}
+.inner{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2em;
 }
 
-.card {
-    margin: 0 auto; /* Added */
-    float: none; /* Added */
-    margin-bottom: 10px; /* Added */
+
+.vmarquee__wrap {
+  background-color: #fff74d
+}
+.vmarquee__wrap {
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+.vmarquee__wrap.ltr {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: nowrap
+}
+
+.vmarquee__content {
+  width: 100000px;
+}
+
+.vmarquee__text {
+  -webkit-animation-name: animation;
+  animation-name: animation;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  float: left;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  letter-spacing: -.05em;
+  padding: 0 5vw;
+  font-family: "VCROSDMono",sans-serif;
+  line-height: 1;
+  font-size: 13.6vw
+}
+
+@media (min-width: 1024px) {
+  .vmarquee__text {
+      font-size:4.94792vw
+  }
+}
+
+@media (max-width: 1023px) {
+  .vmarquee__text {
+      padding:0 5vw 1.8vw
+  }
+}
+
+.vmarquee__outOfScreen .vmarquee__text,.vmarquee__paused .vmarquee__text {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused
+}
+
+.ltr .vmarquee__content {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  flex: 0 0 100000px
+}
+
+.ltr .vmarquee__text {
+  float: none;
+  -webkit-animation-name: animation-ltr;
+  animation-name: animation-ltr
+}
+
+@-webkit-keyframes animation {
+  0% {
+      transform: translateX(0)
+  }
+
+  to {
+      transform: translateX(-100%)
+  }
+}
+
+@keyframes animation {
+  0% {
+      transform: translateX(0)
+  }
+
+  to {
+      transform: translateX(-100%)
+  }
+}
+
+@-webkit-keyframes animation-ltr {
+  0% {
+      transform: translateX(0)
+  }
+
+  to {
+      transform: translateX(100%)
+  }
+}
+
+@keyframes animation-ltr {
+  0% {
+      transform: translateX(0)
+  }
+
+  to {
+      transform: translateX(100%)
+  }
+}
+
+.form-age{
+  width: 100%;
+}
+.form-button{
+  width: 100%;
+}
+.form-answer{
+  background: brown;
 }

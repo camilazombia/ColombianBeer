@@ -1,26 +1,10 @@
-// PRIMERA ENTREGA PROYECTO FINAL
-// PRIMERA PANTALLA ---> SOLICITUD DE EDAD PARA INGRESAR
-
-let edad = prompt("Ingresa tu edad")
-console.log(edad);
-
-if(edad <= 17){
-    alert("No puedes ingresar")
-}
-else if (edad >= 18){ 
-    alert("Tienes acceso")
-}
-else {
-    alert("No es válido");
-}
-
-//CLASE 6 
 class producto{
-    constructor(nombre, clase, grados, precio) {
+    constructor(nombre, tipo, grados, precio,imagen) {
         this.nombre = nombre;
-        this.clase = clase;
+        this.tipo = tipo;
         this.grados = parseFloat(grados);
         this.precio = parseInt(precio);
+        this.image = imagen;
         }
     vender() {
         this.vendido = true;
@@ -34,21 +18,29 @@ class producto{
 }
 
 const productos = [];
-productos.push(new producto("Cerveza Andina", "lager", "4.2", "12900"));
-productos.push(new producto("Miller Lite", "lager", "4.2", "12900"));
-productos.push(new producto("Miller Genuine Draft", "lager", "4.7", "24000"));
-productos.push(new producto("Heineken", "lager", "5", "11800"));
-productos.push(new producto("Coors Ligth", "lager", "4.2", "13800"));
-productos.push(new producto("Sol", "lager", "4.5", "21000"));
-productos.push(new producto("Tecate", "lager", "4.5", "13200"));
+productos.push(new producto("Cerveza Andina", "lager", "4.2", "12900", "https://via.placeholder.com/150"));
+productos.push(new producto("Miller Lite", "lager", "4.2", "12900","https://via.placeholder.com/150"));
+productos.push(new producto("Miller Genuine Draft", "lager", "4.7", "24000", "https://via.placeholder.com/150" ));
+productos.push(new producto("Heineken", "lager", "5", "11800","https://via.placeholder.com/150"));
+productos.push(new producto("Coors Ligth", "lager", "4.2", "13800", "https://via.placeholder.com/150"));
+productos.push(new producto("Sol", "lager", "4.5", "21000", "https://via.placeholder.com/150"));
+productos.push(new producto("Tecate", "lager", "4.5", "13200","https://via.placeholder.com/150" ));
 
-for (const producto of productos)
-    producto.SumaIva();
+for (const producto of productos) {
+    let div = document.createElement("producto");
 
-console.log(productos)
+    div.className='card col-2'
+
+
+    div.innerHTML = 
+    `<img class="img-flid center" src=${producto.image}>
+    <h3> ${producto.nombre}</h3>
+     <p>  Tipo: ${producto.tipo}</p>
+     <p>  Grados: ${producto.grados}</p>
+     <b> $ ${producto.precio}</b>`;
+    document.body.appendChild(div);
+}
 
 
 
-//entrega clase 4 (Producto1/ calcular total)
-const suma  = (a,b) => a + b;
-const resta = (a,b) => a - b;
+
