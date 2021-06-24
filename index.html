@@ -14,40 +14,24 @@
 </head>
 <body>
 <main>
-
-<div class="vmarquee__wrap rtl">
-    <div class="vmarquee__content">
-    <div class="vmarquee__text" style="animation-duration: 15.5s;">
-      Hola, Bienvenido!
+<div class="container w-50 h-25mx mx-auto">
+  <form class="row mx-auto">
+    <div class="form-group">
+      <label for="form-name">Ingresa tu Nombre</label>
+      <input type="text" class="form-control" id="form-name" placeholder="Tu nombre">
     </div>
-    <div class="vmarquee__text" style="animation-duration: 15.5s;">
-      Hola, Bienvenido!
+    <div class="form-group">
+      <label for="form-age">Ingresa tu Edad</label>
+      <input type="number" class="form-control" id="form-age" placeholder="Tu edad">
     </div>
-  </div>
+    <div class="px-5 py-5">
+      <button type="button" id="form-button" class="btn btn-primary" onclick="validate()">Aceptar</button>
+    </div>
+  </form>
+<div class="form-wrong" id="form-wrong"></div>
 </div>
-
-<div class="container">
-<div class="row product">
-  <!--  <div class="col-6">
-<input type="text" value="Ingresa tu edad" class="form-age">
-<div class="col-2">
-<button class="form-button">Enviar</button>
-</div>
-<div class="col-12">
-<p clas="form-answer"></p>
-</div>
-</div>
-</div>-->
-</div>
-
-
-
 
 </main>
-<script src="./js/main.js"></script>
-<script nomodule="" src="/_nuxt/53e58a1.js" defer=""></script>
-<script type="module" src="/_nuxt/f5cd21e.modern.js" defer=""></script>
-<script nomodule="" src="/_nuxt/23.5cd2664cc6efef9c887e.js" defer=""></script>
-<script type="module" src="/_nuxt/23.9d3eb38f6e9e27d6cfea.js" defer=""></script>
+<script src="./js/index.js"></script>
 </body>
 </html>
