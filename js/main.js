@@ -1,7 +1,3 @@
-
-
-
-
 class producto{
     constructor(nombre, tipo, grados, precio,imagen) {
         this.nombre = nombre;
@@ -34,19 +30,23 @@ productos.push(new producto("Tecate", "lager", "4.5", "13200","https://via.place
 for (const producto of productos) {
     let div = document.createElement("div");
 
-    div.className='card col-xs-12 col-sm-4 my-5 px-5'
+    div.className='card col-3'
 
     div.innerHTML = 
-    `<img class="img-fluid product-img"src=${producto.image}>
-    <h3 class="product-name"> ${producto.nombre}</h3>
-     <p class="product-type">  Tipo: ${producto.tipo}</p>
-     <p class="product-gre">  Grados: ${producto.grados}</p>
-     <b class="product-price"> $ ${producto.precio}</b>`;
+    `<img class="card-img-top"src=${producto.image}>
+    <h3 class="card-title"> ${producto.nombre}</h3>
+     <p class="card-type">  Tipo: ${producto.tipo}</p>
+     <p class="card-gre">  Grados: ${producto.grados}</p>
+     <b class="card-price"> $ ${producto.precio}</b>
+     <button type="button" class="card-btn">Comprar</button>`;
      document.body.appendChild(div);
 
     let button = document.createElement("input");
-    button.innerHTML = "Submit";
+    button.innerHTML = "Comprar";
 
+    const product = document.querySelector("#product")
+
+    product.insertAdjacentElement("afterbegin", div);
 }
 
 
@@ -65,3 +65,4 @@ console.log(PrecioDescuento)
 let ValorTotal = resta(suma( PrecioBase, (PrecioIva)), PrecioDescuento); 
 console.log(ValorTotal)
 
+  

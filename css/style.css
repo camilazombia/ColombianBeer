@@ -1,26 +1,190 @@
-
-section:nth-child(odd){
-  background-color: #eee;
+@import url("https://use.typekit.net/qdq3keg.css");
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
 }
-.inner{
-  height: 100%;
+
+.header-txt{
+  font-family: itc-american-typewriter, serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+
+	.svg-beer__00{
+    fill:#FFFE02;
+    stroke:#231F20;
+    stroke-miterlimit:10;}
+	.svg-beer__01{
+    fill:#FA88C3;
+    stroke:#231F20;
+    stroke-miterlimit:10;}
+  .svg-beer__01:hover{
+    fill:red;
+    stroke:#231F20;
+    stroke-miterlimit:10;}
+	.svg-beer__02{
+    fill:#CCC600;}
+	.svg-beer__03{
+    fill:#FFFE02;}
+	.svg-beer__04{
+    fill:none;
+    stroke:#231F20;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;}
+	.svg-beer__05{
+    fill:#FFFFFF;
+    stroke:#231F20;
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;}
+	.svg-beer__06{
+    fill:none;
+    stroke:#CCC600;
+    stroke-width:5;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;}
+	.svg-beer__07{
+    fill:#FFFFFF;}
+
+    .svg-logo{
+      width: 15rem;
+      margin: auto;    }
+
+	.st0{
+    fill:#1C1C1C;
+  }
+  .st1{
+    fill:#FA88C3;
+    animation:colors 4s linear infinite;
+
+  }
+    .svg-logo__animate{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120px;
+      height: 120px;
+      margin:-60px 0 0 -60px;
+      animation:spin 60s infinite;
+      transform-origin: 50% 50%;
+    }
+
+    @keyframes colors {
+      0%   {fill: #FA88C3;}
+      45%  {fill: #ff0100;}
+      95%  {fill: #049fc8;}
+      100%   {fill: #FA88C3;}
+    }
+
+    @keyframes spin { 100% {
+      transform:rotate(-360deg); } }
+
+
+
+
+
+
+.body{
+    font-family: itc-american-typewriter, serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #ffff00;
+  }
+.form{
+  width: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold;
-  font-size: 2em;
 }
 
+.form-name,  .form-age {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-family: blenny, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #fc87c5;
+  text-shadow: -2px 2px 0px black;
+
+}
+
+
+.form-control{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #000;
+    color: #000;
+    background-color: transparent;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    box-shadow: -2px 2px 0px black;
+
+}
+
+.form-btn{
+  background-color: white;
+  color: #000;
+  border: 3px solid;
+  padding: 0px 2rem;
+  text-transform: uppercase;
+  width: 100%;
+  box-shadow: -2px 2px 0px black;
+}
+
+.form-btn:hover{
+  box-shadow: -4px 4px 0px black;
+}
+
+.form-wrong{
+  padding: 1px 0px;
+  height: 20px;
+text-align: center;}
+
+.form-wrong__text{
+  display: inline-block;
+  color: #ff0100;
+  font-size: 10px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  letter-spacing: 5px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.vmarquee{
+  padding-top: 30px;
+}
+
+.vmarquee-rotate1{
+  transform:rotate(-1.5deg);
+}
+
+.vmarquee-rotate0{
+  transform:rotate(0deg);
+}
 
 .vmarquee__wrap {
-  background-color: #fff74d
+  background-color: #fc87c5;
 }
+.vmarquee__wrap:hover {
+  background-color: #ffff00;
+}
+
 .vmarquee__wrap {
   overflow: hidden;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none
+  user-select: none;
 }
 
 .vmarquee__wrap.ltr {
@@ -35,26 +199,41 @@ section:nth-child(odd){
   width: 100000px;
 }
 
+.vmarquee-text__product,
 .vmarquee__text {
-  -webkit-animation-name: animation;
   animation-name: animation;
-  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   float: left;
   text-transform: uppercase;
   box-sizing: border-box;
   letter-spacing: -.05em;
   padding: 0 5vw;
-  font-family: "VCROSDMono",sans-serif;
+  font-family: blenny, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #000;
   line-height: 1;
-  font-size: 13.6vw
+  font-size: 10vw;
 }
+.vmarquee-text__product{
+  font-family: itc-american-typewriter, serif;
+  font-size: 0.1rem;
+  padding:0.4rem;
 
+}
+.vmarquee__text:hover {
+  color: #ff0100;
+}
 @media (min-width: 1024px) {
+  .vmarquee-text__product,
   .vmarquee__text {
       font-size:4.94792vw
+  }
+  .vmarquee-text__product{
+      font-size:2rem;
+      font-weight: 500;
+
   }
 }
 
@@ -65,7 +244,6 @@ section:nth-child(odd){
 }
 
 .vmarquee__outOfScreen .vmarquee__text,.vmarquee__paused .vmarquee__text {
-  -webkit-animation-play-state: paused;
   animation-play-state: paused
 }
 
@@ -78,56 +256,48 @@ section:nth-child(odd){
 
 .ltr .vmarquee__text {
   float: none;
-  -webkit-animation-name: animation-ltr;
   animation-name: animation-ltr
-}
-
-@-webkit-keyframes animation {
-  0% {
-      transform: translateX(0)
-  }
-
-  to {
-      transform: translateX(-100%)
-  }
 }
 
 @keyframes animation {
   0% {
       transform: translateX(0)
   }
-
   to {
       transform: translateX(-100%)
   }
 }
-
-@-webkit-keyframes animation-ltr {
-  0% {
-      transform: translateX(0)
-  }
-
-  to {
-      transform: translateX(100%)
-  }
-}
-
 @keyframes animation-ltr {
   0% {
       transform: translateX(0)
   }
-
   to {
       transform: translateX(100%)
   }
 }
 
-.form-age{
-  width: 100%;
+.sello{
+position: absolute;
+right: 10rem;
+top: calc(var(--space-lg) + 80rem);
+font-size: 20rem;
+transform-origin: center;
+width: 30vh;
+transform: rotate(20deg);
 }
-.form-button{
-  width: 100%;
+
+.footer{
+background-color: #000 ;
 }
-.form-answer{
-  background: brown;
+
+.footer-social{
+  color: #ffff00;
+}
+.footer-social:hover{
+  color: #fc87c5;
+}
+
+.footer-legal {
+  background-color: #fc87c5;
+  color: #000;
 }
