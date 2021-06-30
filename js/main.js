@@ -51,18 +51,18 @@ for (const producto of productos) {
 
 
 //entrega clase 4 (Producto1/ calcular total)
-const suma  = (a,b) => a + b;
-const resta = (a,b) => a - b;
+//const suma  = (a,b) => a + b;
+//const resta = (a,b) => a - b;
 
-let PrecioBase  = producto1.precio; 
-let PrecioIva  = producto1.sumaIva; 
-let PrecioDescuento = producto1.Descuento;
+//let PrecioBase  = producto1.precio; 
+//let PrecioIva  = producto1.sumaIva; 
+//let PrecioDescuento = producto1.Descuento;
 
-console.log(PrecioBase)
-console.log(PrecioIva)
-console.log(PrecioDescuento)
+//console.log(PrecioBase)
+//console.log(PrecioIva)
+//console.log(PrecioDescuento)
 
-let ValorTotal = resta(suma( PrecioBase, (PrecioIva)), PrecioDescuento); 
-console.log(ValorTotal)
+//let ValorTotal = resta(suma( PrecioBase, (PrecioIva)), PrecioDescuento); 
+//console.log(ValorTotal)
 
   
