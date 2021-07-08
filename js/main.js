@@ -59,27 +59,5 @@ for (const producto of productos) {
 }
 
 
-//animaciones
-$(".svg-beer__01").mouseOver("mouseover");
-$(".svg-beer__01").mouseOut("mouseout");
-
-function mouseOver() {
-$(".svg-beer__01").style.color = "red";
-}
-
-function mouseOut() {
-$(".svg-beer__01").style.color = "black";
-}
-
-document.querySelectorAll(".svg-beer__01").addEventListener("mouseover", mouseOver);
-document.querySelectorAll(".svg-beer__01").addEventListener("mouseout", mouseOut);
-
-function mouseOver() {
-  document.querySelectorAll(".svg-beer__01").style.color = "red";
-}
-
-function mouseOut() {
-  document.querySelectorAll(".svg-beer__01").style.color = "black";
-}
 
 
