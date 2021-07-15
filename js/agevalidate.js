@@ -47,3 +47,4 @@ $(".sello").animate({   width:'300px'   },
         .slideUp(4000)
         .delay(2000)
         .slideDown(2000);;
+  
